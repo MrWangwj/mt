@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+    ${ pageContext.request.contextPath }
   </body>
 </html>
