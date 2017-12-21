@@ -9,8 +9,9 @@
 <html>
 <head>
   <title>$Title$</title>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
 </head>
 <body>
-  <a href="${ pageContext.request.contextPath }/">111</a>
+  <button class="btn btn-success">1</button>
 </body>
 </html>
