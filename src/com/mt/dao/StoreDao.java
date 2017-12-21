@@ -3,6 +3,7 @@ package com.mt.dao;
 import com.mt.model.Store;
 import com.mt.utils.JDBCUtils;
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import java.sql.SQLException;
@@ -13,13 +14,29 @@ public class StoreDao {
     //表名称
     private String table = "stores";
 
+    private QueryRunner query;
+
+    public StoreDao(){
+        this.query = new QueryRunner(JDBCUtils.getDataSource());
+    }
+
+
     /*
      * @return 返回所有店铺
      * @throws SQLException
      */
     public List<Store> getAllStore() throws SQLException {
-        QueryRunner query = new QueryRunner(JDBCUtils.getDataSource());
         String sql = "SELECT * FROM "+this.table;
-        return query.query(sql, new BeanListHandler<Store>(Store.class));
+        return this.query.query(sql, new BeanListHandler<Store>(Store.class));
+    }
+
+    /*
+     * @param id  通过id获取店铺
+     * @return
+     * @throws SQLException
+     */
+    public Store findStore(int id) throws SQLException {
+        String sql = "SELECT * FROM "+ this.table+" WHERE id=?;";
+        return this.query.query(sql, new BeanHandler<Store>(Store.class), id);
     }
 }

@@ -8,9 +8,18 @@ import java.util.List;
 
 public class StoreService {
 
-    public List<Store> getAllStore() throws SQLException {
-        StoreDao storedao = new StoreDao();
-        return  storedao.getAllStore();
+    StoreDao storeDao;
+
+    public StoreService(){
+        this.storeDao = new StoreDao();
     }
 
+    public List<Store> getAllStore() throws SQLException {
+        return  this.storeDao.getAllStore();
+    }
+
+
+    public Store findStore(int id) throws  SQLException{
+        return this.storeDao.findStore(id);
+    }
 }
