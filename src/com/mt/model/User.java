@@ -5,9 +5,9 @@ public class User {
     private int id;
     private String name;
     private String phone;
-    private int sex;
+    private String sex;
     private String email;
-    private String passwrod;
+    private String password;
     private int status;
 
     public int getId() {
@@ -34,11 +34,11 @@ public class User {
         this.phone = phone;
     }
 
-    public int getSex() {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex(int sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 
@@ -50,12 +50,12 @@ public class User {
         this.email = email;
     }
 
-    public String getPasswrod() {
-        return passwrod;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasswrod(String passwrod) {
-        this.passwrod = passwrod;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public int getStatus() {
