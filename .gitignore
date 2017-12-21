@@ -1,3 +1,4 @@
 /out
 /.idea
+/src/c3p0-config.xml
 *.iml
