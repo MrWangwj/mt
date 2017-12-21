@@ -8,10 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>$Title$</title>
+  <title></title>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
 </head>
 <body>
-  <button class="btn btn-success">1</button>
+
+  <button class="btn btn-success">${ test }</button>
 </body>
 </html>
