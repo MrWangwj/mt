@@ -35,6 +35,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>MyStoreServlet</servlet-name>
+        <servlet-class>com.mt.servlet.store.MyStoreServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyStoreServlet</servlet-name>
+        <url-pattern>/get/myStore</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>EditStoreServlet</servlet-name>
         <servlet-class>com.mt.servlet.store.EditStoreServlet</servlet-class>
     </servlet>

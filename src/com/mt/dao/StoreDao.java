@@ -1,6 +1,7 @@
 package com.mt.dao;
 
 import com.mt.model.Store;
+import com.mt.model.User;
 import com.mt.utils.JDBCUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
@@ -38,5 +39,10 @@ public class StoreDao {
     public Store findStore(int id) throws SQLException {
         String sql = "SELECT * FROM "+ this.table+" WHERE id=?;";
         return this.query.query(sql, new BeanHandler<Store>(Store.class), id);
+    }
+
+    public List<Store> getMyStore(User user) throws SQLException {
+        String sql = "select * from " + this.table + " where user_id = ?";
+        return this.query.query(sql, new BeanListHandler<Store>(Store.class), user.getId());
     }
 }

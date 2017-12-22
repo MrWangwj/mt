@@ -2,6 +2,7 @@ package com.mt.service;
 
 import com.mt.dao.StoreDao;
 import com.mt.model.Store;
+import com.mt.model.User;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -21,5 +22,9 @@ public class StoreService {
 
     public Store findStore(int id) throws  SQLException{
         return this.storeDao.findStore(id);
+    }
+
+    public List<Store> getMyStore(User user) throws SQLException {
+        return this.storeDao.getMyStore(user);
     }
 }

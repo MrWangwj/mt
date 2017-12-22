@@ -45,6 +45,7 @@ html{
     height: 100%;
     line-height: 100px;
     top:0;
+    /*border: 1px solid red;*/
 }
 
 .header-search{
@@ -69,6 +70,20 @@ html{
     height: 100%;
 }
 
+
+.myStore {
+    width: 1024px;
+    margin: 20px auto 0;
+}
+
+.myStore>span {
+    font-size: 24px;
+}
+
+.myStore>a {
+    float: right;
+    width: 100px;
+}
 
 
 .content{
