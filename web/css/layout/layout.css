@@ -41,10 +41,10 @@ html{
 
 .header-login{
     position: absolute;
+    top:0;
     right: 0;
     height: 100%;
-    line-height: 100px;
-    top:0;
+    padding-top: 25px;
 }
 
 .header-search{
