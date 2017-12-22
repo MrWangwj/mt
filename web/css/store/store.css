@@ -1,0 +1,20 @@
+.store{
+    color: #666;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 5px 14px 0 rgba(0,0,0,.1);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 20px 33px;
+
+}
+.store-text{
+    width: 65%;
+    float: left;
+    border: 1px solid red;
+}
+
+.store-image{
+    width: 30%;
+    float: right;
+    height: 100%;
+}
