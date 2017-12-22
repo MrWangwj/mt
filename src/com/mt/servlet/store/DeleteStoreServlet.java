@@ -9,32 +9,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
 
-public class EditStoreServlet extends HttpServlet {
+public class DeleteStoreServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-
-            User user =(User)request.getSession().getAttribute("user");
+        try{
+            User user = (User)request.getSession().getAttribute("user");
 
             int id = Integer.parseInt(request.getParameter("id"));
 
             StoreService storeService = new StoreService();
+
             Store store = storeService.findStore(id);
 
-            if (store.getUser_id() != user.getId())
-                throw new Exception();
+            if(user.getId() != store.getUser_id())
+                throw  new Exception();
 
-            request.setAttribute("store", store);
-            request.getRequestDispatcher("/home/store/edit.jsp").forward(request,response);
+            storeService.deleteStoreById(id);
 
+            request.getRequestDispatcher("/get/myStore?id="+user.getId()).forward(request, response);
         }catch (Exception e){
             e.printStackTrace();
-            request.getRequestDispatcher("/home/error.jsp").forward(request, response);
+            request.getRequestDispatcher("/home/error.jsp").forward(request,response);
         }
+
     }
 }

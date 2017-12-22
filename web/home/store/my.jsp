@@ -17,7 +17,7 @@
 
 <div class="myStore">
     <span>我的店铺</span>
-    <a class="btn btn-info" href="#" role="button">添加店铺</a>
+    <a class="btn btn-info" href="${ pageContext.request.contextPath }/home/store/add.jsp" role="button">添加店铺</a>
 </div>
 
 <%--content--%>

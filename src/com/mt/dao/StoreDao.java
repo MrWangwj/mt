@@ -45,4 +45,22 @@ public class StoreDao {
         String sql = "select * from " + this.table + " where user_id = ?";
         return this.query.query(sql, new BeanListHandler<Store>(Store.class), user.getId());
     }
+
+    public void save(Store store) throws SQLException{
+        String sql = "insert into " + this.table + " (user_id, name, location, phone, image, created_at) values (?,?,?,?,?,?);";
+        Object[] params = {
+                store.getUser_id(),
+                store.getName(),
+                store.getLocation(),
+                store.getPhone(),
+                store.getImage(),
+                store.getCreated_at()
+        };
+        this.query.update(sql, params);
+    }
+
+    public void deleteStoreById(int id) throws  SQLException{
+        String sql = "delete from "+ this.table+ " where id=?";
+        this.query.update(sql, id);
+    }
 }

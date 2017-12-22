@@ -19,7 +19,7 @@
                 <p>
                     <a href="${ pageContext.request.contextPath }/edit/store?id=${ store.id }">编辑</a>
                     |
-                    <a href="">删除</a>
+                    <a href="${ pageContext.request.contextPath }/delete/store?id=${ store.id }">删除</a>
                 </p>
             </div>
             <div class="store-location">
@@ -34,7 +34,7 @@
     </div>
     <div class="test">
         <h3>参团产品</h3>
-        <button type="button" class="btn btn-success">添加产品</button>
+        <a href="${ pageContext.request.contextPath }/home/good/add.jsp"><button type="button" class="btn btn-success">添加产品</button></a>
     </div>
 
     <div class="goods">

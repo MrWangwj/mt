@@ -20,7 +20,7 @@ public class GoodDao {
     }
 
     public List<Good> getGoodsByStoreId(int id) throws SQLException {
-        String sql = "SELECT * FROM " + this.table + " WHERE id=?;";
+        String sql = "SELECT * FROM " + this.table + " WHERE store_id=?;";
         return this.query.query(sql, new BeanListHandler<Good>(Good.class), id);
     }
 }

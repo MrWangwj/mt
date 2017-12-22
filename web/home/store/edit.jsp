@@ -12,10 +12,11 @@
 <div class="content">
     <div>
         <form class="form-horizontal">
+            <input type="hidden" name="id" value="${ store.id }">
             <div class="form-group">
                 <label for="name" class="col-sm-2 control-label">名称</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name" placeholder="请输入店铺名称" value="${ store.name }">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="请输入店铺名称" value="${ store.name }">
                 </div>
             </div>
 
@@ -29,14 +30,14 @@
             <div class="form-group">
                 <label for="location" class="col-sm-2 control-label">地点</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="location" placeholder="请输入店铺地址" value="${ store.location }">
+                    <input type="text" name="location" class="form-control" id="location" placeholder="请输入店铺地址" value="${ store.location }">
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="phone" class="col-sm-2 control-label">联系电话</label>
+                <label for="phone"  class="col-sm-2 control-label">联系电话</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="phone" placeholder="请输入店铺联系电话" value="${ store.phone }">
+                    <input type="text" name="phone" class="form-control" id="phone" placeholder="请输入店铺联系电话" value="${ store.phone }">
                 </div>
             </div>
 

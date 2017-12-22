@@ -7,7 +7,6 @@
     <title>美团</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
     <link rel="stylesheet" href="${ pageContext.request.contextPath }/css/layout/layout.css">
-
     <link rel="stylesheet" href="${ pageContext.request.contextPath }/css/index/index.css">
 </head>
 <body>

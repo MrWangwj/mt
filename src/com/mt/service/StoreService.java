@@ -27,4 +27,12 @@ public class StoreService {
     public List<Store> getMyStore(User user) throws SQLException {
         return this.storeDao.getMyStore(user);
     }
+
+    public void save(Store store) throws  SQLException{
+        this.storeDao.save(store);
+    }
+
+    public void deleteStoreById(int id) throws SQLException{
+        this.storeDao.deleteStoreById(id);
+    }
 }

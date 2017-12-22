@@ -44,6 +44,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>SetAddStoreServlet</servlet-name>
+        <servlet-class>com.mt.servlet.store.SetAddStoreServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetAddStoreServlet</servlet-name>
+        <url-pattern>/add/store</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>EditStoreServlet</servlet-name>
         <servlet-class>com.mt.servlet.store.EditStoreServlet</servlet-class>
     </servlet>
@@ -51,6 +60,17 @@
         <servlet-name>EditStoreServlet</servlet-name>
         <url-pattern>/edit/store</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteStoreServlet</servlet-name>
+        <servlet-class>com.mt.servlet.store.DeleteStoreServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteStoreServlet</servlet-name>
+        <url-pattern>/delete/store</url-pattern>
+    </servlet-mapping>
+
+
 
 
     <welcome-file-list>
