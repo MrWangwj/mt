@@ -23,7 +23,7 @@
             <div class="header-login">
                 <a href="/home/login/login.jsp">登录</a>
                 <span>|</span>
-                <a href="##">注册</a>
+                <a href="/home/login/register.jsp">注册</a>
             </div>
         </c:if>
     </div>

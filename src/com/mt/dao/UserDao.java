@@ -19,4 +19,17 @@ public class UserDao {
         User u = queryRunner.query(sql, new BeanHandler<User>(User.class), params);
         return u;
     }
+
+    public int addUser(User user) throws SQLException {
+        QueryRunner queryRunner = new QueryRunner(JDBCUtils.getDataSource());
+        String sql = "insert into users (name, phone, sex, email, password) values (?,?,?,?,?)";
+        Object[] params = {
+                user.getName(),
+                user.getPhone(),
+                user.getSex(),
+                user.getEmail(),
+                user.getPassword()
+        };
+        return queryRunner.update(sql, params);
+    }
 }
