@@ -21,6 +21,8 @@ import java.util.Map;
 @WebServlet(name = "SetEidtStoreServlet")
 public class SetEidtStoreServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setHeader("Content-type", "text/html;charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
         request.setCharacterEncoding("UTF-8");
         try {
             User user = (User)request.getSession().getAttribute("user");
@@ -34,16 +36,17 @@ public class SetEidtStoreServlet extends HttpServlet {
             if(user.getId() != store.getUser_id())
                 throw  new Exception();
 
+            System.out.println(request.getParameter("name"));
             store.setName(request.getParameter("name"));
             store.setLocation(request.getParameter("location"));
             store.setLocation(request.getParameter("phone"));
 
             storeService.updateStore(store);
 
-            request.getRequestDispatcher("/").forward(request,response);
+            response.getWriter().write(VenderUtils.returnToJson(1, "修改成功", null));
         }catch (Exception e){
             e.printStackTrace();
-            request.getRequestDispatcher("/home/error.jsp").forward(request,response);
+            response.getWriter().write(VenderUtils.returnToJson(0, "修改失败", null));
         }
     }
 

@@ -59,7 +59,14 @@
                 phone: $('#phone').val(),
             },
             function (data) {
-                
+
+                var obj = JSON.parse(data)[0];
+                if(obj.code === 1){
+                    alert(obj.msg);
+                }else{
+                    alert(obj.msg);
+                }
+
             }
         );
     }

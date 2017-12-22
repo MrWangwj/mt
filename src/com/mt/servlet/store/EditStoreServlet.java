@@ -30,7 +30,7 @@ public class EditStoreServlet extends HttpServlet {
                 throw new Exception();
 
             request.setAttribute("store", store);
-            request.getRequestDispatcher("/home/store/edit.jsp").forward(request,response);
+            request.getRequestDispatcher("/home/store/edit.jsp").forward(request, response);
 
         }catch (Exception e){
             e.printStackTrace();

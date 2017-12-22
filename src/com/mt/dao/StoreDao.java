@@ -65,7 +65,7 @@ public class StoreDao {
     }
 
     public void updateStore(Store store) throws  SQLException{
-        String sql = "updata " + this.table + " set name=?,location=?,phone=? where id=?";
+        String sql = "update " + this.table + " set name=?,location=?,phone=? where id=?";
         Object[] params = {
                 store.getName(),
                 store.getLocation(),
