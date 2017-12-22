@@ -22,6 +22,9 @@
         <url-pattern>/LoginServlet</url-pattern>
     </servlet-mapping>
 
+
+
+
     <servlet>
         <servlet-name>StoreServlet</servlet-name>
         <servlet-class>com.mt.servlet.store.StoreServlet</servlet-class>
@@ -31,6 +34,14 @@
         <url-pattern>/get/store</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>EditStoreServlet</servlet-name>
+        <servlet-class>com.mt.servlet.store.EditStoreServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditStoreServlet</servlet-name>
+        <url-pattern>/edit/store</url-pattern>
+    </servlet-mapping>
 
 
     <welcome-file-list>

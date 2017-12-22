@@ -14,7 +14,7 @@
         </div>
 
         <div class="header-login">
-            <a href="">登录</a>
+            <a href="${ pageContext.request.contextPath }/home/login/login.jsp">登录</a>
             <span>|</span>
             <a href="">注册</a>
         </div>
