@@ -15,4 +15,9 @@ public class UserService {
         UserDao userDao = new UserDao();
         return userDao.login(user);
     }
+
+    public int addUser(User user) throws SQLException {
+        UserDao userDao = new UserDao();
+        return userDao.addUser(user);
+    }
 }
