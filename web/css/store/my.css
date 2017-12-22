@@ -1,0 +1,13 @@
+.myStore {
+    width: 1024px;
+    margin: 20px auto 0;
+}
+
+.myStore>span {
+    font-size: 24px;
+}
+
+.myStore>a {
+    float: right;
+    width: 100px;
+}
