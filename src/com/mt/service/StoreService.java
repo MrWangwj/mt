@@ -35,4 +35,8 @@ public class StoreService {
     public void deleteStoreById(int id) throws SQLException{
         this.storeDao.deleteStoreById(id);
     }
+
+    public void updateStore(Store store) throws SQLException{
+        this.storeDao.updateStore(store);
+    }
 }

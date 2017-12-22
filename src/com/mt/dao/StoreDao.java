@@ -63,4 +63,15 @@ public class StoreDao {
         String sql = "delete from "+ this.table+ " where id=?";
         this.query.update(sql, id);
     }
+
+    public void updateStore(Store store) throws  SQLException{
+        String sql = "updata " + this.table + " set name=?,location=?,phone=? where id=?";
+        Object[] params = {
+                store.getName(),
+                store.getLocation(),
+                store.getPhone(),
+                store.getId(),
+        };
+        this.query.update(sql, params);
+    }
 }

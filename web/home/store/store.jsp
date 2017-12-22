@@ -16,11 +16,14 @@
         <div class="store-text">
             <div class="store-name">
                 <h1>${ store.getName() }</h1>
-                <p>
-                    <a href="${ pageContext.request.contextPath }/edit/store?id=${ store.id }">编辑</a>
-                    |
-                    <a href="${ pageContext.request.contextPath }/delete/store?id=${ store.id }">删除</a>
-                </p>
+                <c:if test="${ user.getId() == store.getUser_id() }">
+                    <p>
+                        <a href="${ pageContext.request.contextPath }/edit/store?id=${ store.getId() }">编辑</a>
+                        |
+                        <a href="${ pageContext.request.contextPath }/delete/store?id=${ store.getId() }">删除</a>
+                    </p>
+                </c:if>
+
             </div>
             <div class="store-location">
                 <p>地址：${ store.getLocation() }</p>
@@ -34,7 +37,9 @@
     </div>
     <div class="test">
         <h3>参团产品</h3>
-        <a href="${ pageContext.request.contextPath }/home/good/add.jsp"><button type="button" class="btn btn-success">添加产品</button></a>
+        <c:if test="${ user.getId() == store.getUser_id() }">
+            <a href="${ pageContext.request.contextPath }/home/good/add.jsp"><button type="button" class="btn btn-success">添加产品</button></a>
+        </c:if>
     </div>
 
     <div class="goods">
@@ -49,9 +54,11 @@
                         <div>
                             <h4>${ good.name }</h4>
                             <p>
-                                <a href="">删除</a>
-                                |
-                                <a href="">编辑</a>
+                                <c:if test="${ user.getId() == store.getUser_id() }">
+                                    <a href="">删除</a>
+                                    |
+                                    <a href="">编辑</a>
+                                </c:if>
                             </p>
                         </div>
                         <p>￥<span>${ good.price }</span></p>

@@ -78,6 +78,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>SetEditStoreServlet</servlet-name>
+        <servlet-class>com.mt.servlet.store.SetEidtStoreServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetEditStoreServlet</servlet-name>
+        <url-pattern>/set/edit/store</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>DeleteStoreServlet</servlet-name>
         <servlet-class>com.mt.servlet.store.DeleteStoreServlet</servlet-class>
     </servlet>
